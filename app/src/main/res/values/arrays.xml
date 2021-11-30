@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="clasificación">
+        <item>Seleccione...</item>
+        <item>De combate</item>
+        <item>De pelota</item>
+        <item>Mecánicos</item>
+        <item>Atléticos</item>
+    </string-array>
+</resources>
