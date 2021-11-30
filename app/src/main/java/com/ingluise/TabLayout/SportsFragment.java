@@ -13,27 +13,12 @@ import androidx.fragment.app.Fragment;
 import com.google.android.material.textfield.TextInputEditText;
 
 public class SportsFragment extends Fragment {
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    private String mParam1;
-    private String mParam2;
-
     private TextInputEditText ti;
     private Spinner sp;
     private Button b;
 
     public SportsFragment() {
         // Required empty public constructor
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
     }
 
     @Override
@@ -48,7 +33,8 @@ public class SportsFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 String nom = ti.getText().toString();
-                Toast.makeText(getContext(), "Deporte: " + nom + "\nClasificación: "+sp.getSelectedItem(),
+                String clas = sp.getSelectedItem().toString();
+                Toast.makeText(getContext(), "Deporte: " + nom + "\nClasificación: " + clas,
                         Toast.LENGTH_SHORT).show();
             }
         });
