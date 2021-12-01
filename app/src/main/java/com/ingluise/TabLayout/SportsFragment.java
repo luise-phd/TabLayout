@@ -34,8 +34,12 @@ public class SportsFragment extends Fragment {
             public void onClick(View view) {
                 String nom = ti.getText().toString();
                 String clas = sp.getSelectedItem().toString();
-                Toast.makeText(getContext(), "Deporte: " + nom + "\nClasificación: " + clas,
-                        Toast.LENGTH_SHORT).show();
+                if (!nom.equals("") && !clas.equals("Seleccione...")) {
+                    Toast.makeText(getContext(), "Deporte: " + nom + "\nClasificación: " + clas,
+                            Toast.LENGTH_LONG).show();
+                } else
+                    Toast.makeText(getContext(), "Por favor, ingrese todos los datos: ",
+                            Toast.LENGTH_LONG).show();
             }
         });
 
